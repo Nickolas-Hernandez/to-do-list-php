@@ -8,7 +8,6 @@ body {
   font-family: "Lato", sans-serif;
   background-color: #354A54;
   color: white;
-  width: 100%;
 }
 
 h1 {
@@ -42,7 +41,6 @@ h1 {
 
 .plus-icon {
   font-size: 24px;
-  margin-left: .5rem;
   color: #98AFBA;
   cursor: pointer;
   transition: transform .1s ease-in;

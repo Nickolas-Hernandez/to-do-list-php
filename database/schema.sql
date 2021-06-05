@@ -1,0 +1,5 @@
+CREATE TABLE to_dos (
+  id    INT PRIMARY KEY AUTO_INCREMENT,
+  toDo  VARCHAR(40) NOT NULL,
+  isCompleted VARCHAR(5) NOT NULL
+);

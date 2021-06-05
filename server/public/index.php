@@ -13,9 +13,13 @@
 </head>
 <body>
   <h1>To Do List&colon;</h1>
-  <form action="index.php" method="POST" class="new-to-do-form">
-      <input type="text" class="new-to-do-input" maxlength="40">
+  <form action="../api/todos.php" method="POST" class="new-to-do-form">
+      <input type="text" name="to_do" class="new-to-do-input" maxlength="40">
       <button class="fas fa-plus-square plus-icon"></button>
   </form>
+  <div>
+    <?php echo $_SERVER['REQUEST_URI']; ?>
+  </div>
+  <!-- <script src="main.js"></script> -->
 </body>
 </html>
