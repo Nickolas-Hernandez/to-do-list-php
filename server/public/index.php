@@ -1,3 +1,4 @@
+<?php require_once "../src/get-todos.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +14,22 @@
 </head>
 <body>
   <h1>To Do List&colon;</h1>
-  <form action="index.php" method="POST" class="new-to-do-form">
-      <input type="text" class="new-to-do-input" maxlength="40">
+  <form action="../src/create-todo.php" method="POST" class="new-to-do-form">
+      <input type="text" name="task" class="new-to-do-input" maxlength="40">
       <button class="fas fa-plus-square plus-icon"></button>
   </form>
+  <div class="to-dos-container">
+    <?php
+      while($row = mysqli_fetch_assoc($result)){
+        $className = $row['isCompleted'] === "false" ? "task" : "task completed";
+        ?>
+        <div class="<?php echo  $className ?>" id="<?php echo $row['id'] ?>">
+          <p><?php echo $row['task'] ?></p>
+        </div>
+        <?php
+      }
+    ?>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>
