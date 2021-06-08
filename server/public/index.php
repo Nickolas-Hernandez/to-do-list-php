@@ -14,7 +14,7 @@
 </head>
 <body>
   <h1>To Do List&colon;</h1>
-  <form action="../src/create-todo.php" method="POST" class="new-to-do-form">
+  <form action="" method="POST" class="new-to-do-form">
       <input type="text" name="task" class="new-to-do-input" maxlength="40">
       <button class="fas fa-plus-square plus-icon"></button>
   </form>
