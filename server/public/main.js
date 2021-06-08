@@ -1,6 +1,7 @@
 const form = document.querySelector('.new-to-do-form');
 const toDosContainer = document.querySelector('.to-dos-container');
 const tasks = document.querySelectorAll('.task');
+let lastIndex = parseInt(tasks[tasks.length - 1].id);
 
 function handleNewTodo(task) {
   const xhr = new XMLHttpRequest();
@@ -9,7 +10,6 @@ function handleNewTodo(task) {
 }
 
 function appendNewTodo(task) {
-  let lastIndex = parseInt(tasks[tasks.length - 1].id);
   const container = document.createElement('div');
   container.setAttribute('class', 'task');
   container.setAttribute('id', lastIndex + 1);
