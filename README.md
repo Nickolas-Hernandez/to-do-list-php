@@ -1,6 +1,6 @@
 # to-do-list-php
 
-A simple HTML, CSS, JavaSCript, and PHP application that utilizes AJAX and PHP scripts to perform CRUD operations on a MySQL database. 
+A simple HTML, CSS, JavaScript, and PHP application that utilizes AJAX and PHP scripts to perform CRUD operations on a MySQL database. 
 
 
 
