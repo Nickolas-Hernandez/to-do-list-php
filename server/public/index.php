@@ -25,6 +25,7 @@
         ?>
         <div class="<?php echo  $className ?>" id="<?php echo $row['id'] ?>">
           <p><?php echo $row['task'] ?></p>
+          <i class="fas fa-check-square complete-to-do"></i>
         </div>
         <?php
       }

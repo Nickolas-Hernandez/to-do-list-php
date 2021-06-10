@@ -1,6 +1,5 @@
 <?php
   if(isset($_GET["task"])) {
-    echo 'yes';
     require_once 'db.php';
     $statement = mysqli_prepare($db, "INSERT INTO to_dos (task, isCompleted) VALUES (?, ?)");
     $task = $_GET["task"];
