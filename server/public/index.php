@@ -30,6 +30,7 @@ require_once "../src/get-todos.php";
         <div class="<?php echo  $className ?>" id="<?php echo $row['id'] ?>">
           <p><?php echo $row['task'] ?></p>
           <i class="fas fa-check-square check-icon"></i>
+          <i class="fas fa-minus-square delete-icon"></i>
         </div>
         <?php
       }
@@ -37,16 +38,22 @@ require_once "../src/get-todos.php";
   </div>
   <style>
     /* task styles */
-      .check-icon {
+      .check-icon,
+      .delete-icon {
         margin-left: auto;
         font-size: 20px;
         cursor: pointer;
         color: #008952;
       }
 
-      .check-icon:hover {
-        transform: scale(1.1);
+      .delete-icon {
+        color: #BC5D5D;
+        margin: 0 .2rem;
+      }
 
+      .check-icon:hover,
+      .delete-icon:hover {
+        transform: scale(1.1);
       }
 
       .task.completed {
@@ -58,7 +65,8 @@ require_once "../src/get-todos.php";
       }
 
       @media only screen and ( min-width: 768px){
-        .check-icon {
+        .check-icon,
+        .delete-icon {
           font-size: 24px;
         }
       }

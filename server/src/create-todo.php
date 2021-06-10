@@ -7,7 +7,7 @@
     mysqli_stmt_bind_param($statement, 'ss', $task, $isCompleted);
     mysqli_stmt_execute($statement);
     if(mysqli_error($db)){
-      echo "oops";
+      echo "Unable to access database" . mysqli_error($db);
       exit;
     }
   }
