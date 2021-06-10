@@ -17,7 +17,7 @@ function appendNewTodo(task) {
   taskWrapper.append(task);
   container.appendChild(taskWrapper);
   const checkIcon = document.createElement('i');
-  checkIcon.setAttribute('class', 'fas fa-check-square completed-todo');
+  checkIcon.setAttribute('class', 'fas fa-check-square check-icon');
   container.appendChild(checkIcon);
   toDosContainer.appendChild(container);
   lastIndex++;
@@ -29,9 +29,9 @@ function updateDatabase(id, status) {
   xhr.send();
 }
 
-// updateClassName(parent, status) {
-//   parent.classList.toggle('completed');
-// }
+function updateClassName(parent, status) {
+  parent.classList.toggle('completed');
+}
 
 
 form.addEventListener('submit', event => {
@@ -46,11 +46,8 @@ form.addEventListener('submit', event => {
 toDosContainer.addEventListener('click', event => {
   if(event.target.tagName !== "I") return;
   const parent = event.target.parentElement;
-  console.log(parent);
   const id = parent.id;
-  console.log(id);
   const isCompleted = parent.classList.contains("completed") ? "true" : "false";
-  console.log(isCompleted);
   updateDatabase(id, isCompleted);
-  // updateClassName(parent, isCompleted);
+  updateClassName(parent, isCompleted);
 });

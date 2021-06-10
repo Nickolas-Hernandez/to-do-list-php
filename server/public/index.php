@@ -1,4 +1,8 @@
-<?php require_once "../src/get-todos.php"; ?>
+<?php
+
+require_once "../src/get-todos.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +29,40 @@
         ?>
         <div class="<?php echo  $className ?>" id="<?php echo $row['id'] ?>">
           <p><?php echo $row['task'] ?></p>
-          <i class="fas fa-check-square complete-to-do"></i>
+          <i class="fas fa-check-square check-icon"></i>
         </div>
         <?php
       }
     ?>
   </div>
+  <style>
+    /* task styles */
+      .check-icon {
+        margin-left: auto;
+        font-size: 20px;
+        cursor: pointer;
+        color: #008952;
+      }
+
+      .check-icon:hover {
+        transform: scale(1.1);
+
+      }
+
+      .task.completed {
+        opacity: 60%;
+      }
+
+      .task.completed > p {
+        text-decoration: line-through;
+      }
+
+      @media only screen and ( min-width: 768px){
+        .check-icon {
+          font-size: 24px;
+        }
+      }
+  </style>
   <script src="main.js"></script>
 </body>
 </html>
