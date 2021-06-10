@@ -52,8 +52,8 @@ h1 {
 }
 
 .task {
-  color: black;
-  font-weight: 500;
+  color: red;
+  font-weight: 700;
   margin: .8rem auto;
 }
 
@@ -81,4 +81,8 @@ h1 {
     margin: .8rem auto;
     font-size: 18px;
   }
+}
+
+.hidden {
+  display: none;
 }
