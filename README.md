@@ -4,7 +4,7 @@ A simple HTML, CSS, JavaScript, and PHP application that utilizes AJAX and PHP s
 
 ## Project Takeaways
 
-This project was created to exercise MySQL queries with PHP. Topics learned include: MySQLI, prepared statements, and using AJAX together with PHP.     
+This project was created to exercise MySQL queries with PHP. Topics learned include: PHP superglobal variables, MySQLI, prepared statements, and using AJAX together with PHP.     
 
 ### Demo:
 ![Animated GIF-downsized_large (8)](https://user-images.githubusercontent.com/75342275/121570041-528ba580-c9d6-11eb-9b34-ea244173e4b0.gif)
